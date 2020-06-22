@@ -21,26 +21,26 @@ To start a _single server_, run ```./pps-launch-server``` in a terminal (you can
 ### Commands
 
 We use the notation as follows:
-- \[X\] implies X is optional
+- [ X ] implies X is optional
 - \<Y\> implies Y is compulsory
 - ... implies a variable number of arguments
 - \[--\] is used to differentiate the optional arguments and the compulsory ones (as "-n" could be a key in our hash table)
 
 You can run the following commands in a terminal to interact with the Hash Table:
 
-- Put an element (key, value) in the table :
+- Put an element (key, value) in the table :  
  ```./pps-client-put [-n N] [-w W] [--] <key> <value>```
-- Get a value from the table :
+- Get a value from the table :  
  ```./pps-client-get [-n N] [-r R] [--] <key>```
-- List all the nodes and know which one is up and which one is down :
+- List all the nodes and know which one is up and which one is down :  
  ```./pps-list-nodes```
-- Dump the content of a given node : 
+- Dump the content of a given node :   
 ```./pps-dump-node <IP> <Port>```
-- Concatenate values from multiple keys and store the result with a new key :
+- Concatenate values from multiple keys and store the result with a new key :  
  ```./pps-client-cat [-n N] [-w W] [-r R] [--] <input-key1> <input-key2> ... <output-key>```
-- Get a substring of a value and store it with a new key : 
+- Get a substring of a value and store it with a new key :   
  ```./pps-client-substr [-n N] [-w W] [-r R] [--] <input-key> <position> <length> <output-key>```
-- Find the index of a matching substring in another key-value pair :
+- Find the index of a matching substring in another key-value pair :  
  ```./pps-client-find [-n N] [-w W] [-r R] [--] <key-to-search> <key-to-search-for>```
 
 Note : for the system to work correctly, you might need to adjust the N, R, W and S values:
